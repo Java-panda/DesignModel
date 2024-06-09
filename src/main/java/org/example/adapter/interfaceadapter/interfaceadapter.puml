@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+Interface IAdaptee{
+    void beforeAdapter();
+}
+Interface IAdapter{
+    void afterAdapter();
+}
+class AdapterImpl implements IAdapter,IAdaptee{
+    void afterAdapter();
+    void beforeAdapter();
+}
+
+class Client{
+    Adapter adapter;
+}
+
+
+Client ..> AdapterImpl
+Client ..> IAdapter
+@enduml
