@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+abstract class AbstractTemplate {
+    public final Object queryForObject(String sql,String ... params);
+    abstract Connection createConnection();
+    abstract String parseSql(String sql,String ... params);
+    abstract Object query(String sql);
+    abstract void close();
+}
+class JdbcTemplate extends AbstractTemplate {
+    abstract Connection createConnection();
+    abstract String parseSql(String sql,String ... params);
+    abstract Object query(String sql);
+    abstract void close();
+}
+
+note right of AbstractTemplate
+    public final Object queryForObject(String sql,String ... params){
+        Connection connection = createConnection();
+        String parsedSql = parseSql(sql, params);
+        Object queryObject = query(parsedSql);
+        close();
+        return queryObject;
+    }
+end note
+@enduml

@@ -1,4 +1,4 @@
-package com.panda.adapter.classadapter;
+package com.panda.structor.adapter.interfaceadapter;
 
 public class Client {
     public static void main(String[] args) {

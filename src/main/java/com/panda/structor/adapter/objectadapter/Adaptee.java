@@ -1,4 +1,4 @@
-package com.panda.adapter.objectadapter;
+package com.panda.structor.adapter.objectadapter;
 
 public class Adaptee {
     public void beforeAdapter(){

@@ -1,4 +1,4 @@
-package com.panda.observer;
+package com.panda.behaver.observer;
 
 import java.util.Observable;
 import java.util.Observer;

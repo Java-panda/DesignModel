@@ -1,4 +1,4 @@
-package com.panda.adapter.interfaceadapter;
+package com.panda.structor.adapter.interfaceadapter;
 
 public interface IAdapter {
     public void afterAdapter();

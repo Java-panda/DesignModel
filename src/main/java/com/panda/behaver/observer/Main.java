@@ -1,4 +1,4 @@
-package com.panda.observer;
+package com.panda.behaver.observer;
 
 public class Main {
     public static void main(String[] args) {
