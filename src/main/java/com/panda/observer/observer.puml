@@ -1,0 +1,29 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Observable {
+    synchronized void addObserver(Observer o)
+    synchronized void deleteObserver(Observer o)
+    void notifyObservers(Object arg)
+}
+interface Observer {
+    void update(Observable o, Object arg)
+}
+class SensorDataObservable{
+    private float[] data;
+    void notifyObservers(Object arg)
+}
+
+class HuaWeiObserver {
+    void update(Observable o, Object arg)
+}
+class XiaomiObserver {
+    void update(Observable o, Object arg)
+}
+Observable o-->Observer :"聚合"
+HuaWeiObserver ..> Observable :"依赖"
+XiaomiObserver ..> Observable :"依赖"
+HuaWeiObserver ..|> Observer :"实现"
+XiaomiObserver ..|> Observer :"实现"
+SensorDataObservable --|> Observable :"继承"
+@enduml

@@ -1,7 +1,4 @@
-package org.example.adapter.objectadapter;
-
-import org.example.adapter.objectadapter.Adaptee;
-import org.example.adapter.objectadapter.IAdapter;
+package com.panda.adapter.objectadapter;
 
 public class AdapterImpl implements IAdapter {
     private final Adaptee adaptee;

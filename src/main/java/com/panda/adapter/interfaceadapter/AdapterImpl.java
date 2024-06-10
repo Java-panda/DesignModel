@@ -1,4 +1,4 @@
-package org.example.adapter.interfaceadapter;
+package com.panda.adapter.interfaceadapter;
 
 public class AdapterImpl implements IAdapter,IAdaptee {
 

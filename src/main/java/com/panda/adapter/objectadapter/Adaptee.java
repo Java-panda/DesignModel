@@ -1,4 +1,4 @@
-package org.example.adapter.objectadapter;
+package com.panda.adapter.objectadapter;
 
 public class Adaptee {
     public void beforeAdapter(){

@@ -1,4 +1,4 @@
-package org.example.adapter.classadapter;
+package com.panda.adapter.classadapter;
 
 public class AdapterImpl extends Adaptee implements IAdapter{
     @Override
