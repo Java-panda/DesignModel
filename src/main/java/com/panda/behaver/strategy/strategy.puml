@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+interface ISortStrategy {
+    void sort(int[] array);
+}
+
+class BubbleSort implements ISortStrategy {
+    public void sort(int[] array);
+}
+
+class SelectSort implements ISortStrategy {
+    public void sort(int[] array);
+}
+
+class Main {
+
+}
+
+Main ..> ISortStrategy
+Main ..> BubbleSort
+Main ..> SelectSort
+@enduml
