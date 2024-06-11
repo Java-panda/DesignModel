@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+interface ISpeaker {
+    void speak();
+}
+abstract class AbstractSpeaker implements ISpeaker{
+    private ISpeaker innerSpeaker;
+    public void speak();
+}
+class ChineseSpeaker extends AbstractSpeaker{
+    public ChineseSpeaker(ISpeaker speaker);
+    public void speak();
+}
+class EnglishSpeaker extends AbstractSpeaker{
+    public EnglishSpeaker(ISpeaker speaker);
+    public void speak();
+}
+class LocalSpeaker implements ISpeaker{
+    public void speak();
+}
+
+AbstractSpeaker *--> ISpeaker
+@enduml
