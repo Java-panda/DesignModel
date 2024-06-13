@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+interface People {
+    Object doWhat();
+}
+
+class Actor implements People{
+    public Object doWhat();
+}
+
+class PeopleProxyHandler implements InvocationHandler {
+    private People people;
+    public PeopleProxyHandler(People people)
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable;
+}
+
+class Proxy implements People{
+public static Object newProxyInstance(ClassLoader loader,Class<?>[] interfaces,InvocationHandler h)
+}
+
+Proxy ..>InvocationHandler
+PeopleProxyHandler *-->People
+@enduml
+
